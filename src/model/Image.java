@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package imagebrowser;
+package model;
 
 import java.awt.Graphics;
 import java.io.File;
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 /**
@@ -17,13 +11,14 @@ import javax.swing.ImageIcon;
 public class Image extends javax.swing.JPanel {
 
     private File file;
-    private ImageIcon img;
+    private final ImageIcon img;
 
     public Image(File file) {
         img = new ImageIcon(file.toString());
         this.setSize(img.getIconWidth(), img.getIconHeight()); //se selecciona el tamaño del panel
     }
 
+    @Override
     public int getHeight() {
         return img.getIconHeight();
     }
@@ -33,6 +28,7 @@ public class Image extends javax.swing.JPanel {
     }
 
 //Se crea un método cuyo parámetro debe ser un objeto Graphics
+    @Override
     public void paint(Graphics grafico) {
 
 //Se selecciona la imagen que tenemos en el paquete de la //ruta del programa

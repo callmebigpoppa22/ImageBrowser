@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package imagebrowser;
+package view.persistence;
 
+import model.Image;
 import java.io.File;
 
 /**
@@ -13,8 +9,8 @@ import java.io.File;
  */
 public class ImageLoader {
 
-    private File[] imageFiles;
-    private Image[] images;
+    private final File[] imageFiles;
+    private final Image[] images;
 
     public ImageLoader(File[] imageFiles) {
         this.imageFiles = imageFiles;
@@ -24,9 +20,8 @@ public class ImageLoader {
         }
     }
 
-    protected Image[] load() {
+    public Image[] load() {
         return images;
     }
-
 
 }

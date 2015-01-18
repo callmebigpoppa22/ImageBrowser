@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package imagebrowser;
+package view.ui;
 
+import view.persistence.ImageFileFilter;
 import java.awt.Component;
 import java.io.File;
 import javax.swing.JFileChooser;
@@ -15,13 +11,13 @@ import javax.swing.JFileChooser;
  */
 public class FileChooser {
 
-    private Component parent;
+    private final Component parent;
 
     public FileChooser(Component parent) {
         this.parent = parent;
     }
 
-    protected File[] openFile() {
+    public File[] openFile() {
         JFileChooser chooser = new JFileChooser();
         chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         chooser.showOpenDialog(parent);

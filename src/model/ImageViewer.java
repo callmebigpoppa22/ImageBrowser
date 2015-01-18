@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package imagebrowser;
+package model;
 
 /**
  *
@@ -12,7 +7,7 @@ package imagebrowser;
 public class ImageViewer {
 
     private int index = 0;
-    private Image[] images;
+    private final Image[] images;
 
     public ImageViewer(Image[] images) {
         this.images = images;

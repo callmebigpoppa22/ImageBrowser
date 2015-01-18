@@ -1,6 +1,6 @@
 package application;
 
-import imagebrowser.ApplicationFrame;
+import view.ui.ApplicationFrame;
 
 /**
  *
